@@ -1,0 +1,13 @@
+.image {
+    position: absolute;
+    left: 200%; /* Ẩn hình ảnh ở bên trái khỏi khung nhìn ban đầu */
+    transition: left 0.5s ease; /* Thêm hiệu ứng trượt mượt mà */
+}
+
+.image:nth-child(odd) {
+    left: 0%;
+}
+
+.image:nth-child(even) {
+    left: 100%;
+}
