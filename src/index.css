@@ -14,6 +14,12 @@
 }
 
 @font-face {
+    font-family: "inter500"; /* Tên của phông chữ */
+    src: url("'https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'")
+        format("woff2");
+}
+
+@font-face {
     font-family: "inter"; /* Tên của phông chữ */
     src: url("'https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap'")
         format("woff2");

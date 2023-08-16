@@ -21,17 +21,11 @@ export default {
         'interRegular': ['interRegular', ' Tahoma', 'sans-serif'],
         'interBold': ['interBold', ' Tahoma', 'sans-serif'],
         'interBoldSemiBold': ['interBoldSemiBold', ' Tahoma', 'sans-serif'],
+        'inter500': ['inter500', ' Tahoma', 'sans-serif'],
 
       },
       screens: {
-        'sm': '100px',
-        // => @media (min-width: 640px) { ... }
-
-        'laptop': '1024px',
-        // => @media (min-width: 1024px) { ... }
-
-        'lg': '1280px',
-        // => @media (min-width: 1280px) { ... }
+        sm: { min: '100px', max: '1120px' },
       },
     },
   },

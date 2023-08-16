@@ -1,8 +1,11 @@
 import React from "react";
 import logo from "../../src/assets/img/logo.png";
 import bar from "../../src/assets/img/Vector.png";
+import { useAnimate, stagger } from "framer-motion";
 
-export const Header = () => {
+export const Header = (isOpen) => {
+    const [scope, animate] = useAnimate();
+
     return (
         <div className="w-[100%] flex justify-center bg-primary">
             <div className="sm:w-[100%] sm:h-[73px] sm:px-[2]  lg:w-[1120px] lg:h-[126px] m-auto flex justify-between items-center">

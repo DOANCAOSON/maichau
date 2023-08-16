@@ -1,26 +1,45 @@
+
+import { motion } from "framer-motion";
 import iconleft from "../assets/img/icon-left.png";
 import iconright from "../assets/img/icon-right.png";
-import { motion } from "framer-motion";
 const Item = ({
     data,
-    handleItemClickRight,
-    handleItemClickLeft,
     active,
+    handleItemClickRight,
+    handleItemClickLeft
 }) => {
-    console.log(active);
+    
     return (
         <section
             key={indexedDB}
-            className={`mt-[56px] ${
-                active ? "flex" : "hidden"
-            } gap-[32px] relative w-[1120px] sm:h-auto`}
+            className={`mt-[56px]  ${
+                active ? "grid lg:grid-cols-2" : "hidden"
+            } gap-[32px] relative  lg:w-[1120px] sm:grid-cols-1 sm:h-auto sm:w-[100%]`}
         >
+            <div className="lg:w-[80%] lg:hidden h-[426px] sm:h-[120%] lg:h-[100%] sm:w-[100%] relative">
+                <div className="sm:w-[100%] absolute right-0 bottom-0">
+                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ amount: true }}
+                    transition={{
+                        duration: 0.5,
+                        delay: 0.2,
+                    }}
+                    className="font-BeautiqueDisplay   text-[56px] sm:text-4xl  h-[90px] sm:h-[auto] text-left mb-[24px] sm:mb-[12px] relative parent"
+                >
+                    0{data.id}.<span>{data.btn}</span>
+                </motion.div>
+                <div className="absolute top-[40px] left-0 w-[30%]  h-[5px] bg-primary"></div>
+            </div>
             <div
                 style={{
                     transition: "all 1s ease-out 1.2s",
                 }}
-                className="w-[57%] h-[426px] flex relative truncate "
+                className="lg:w-[100%] sm:w-[100%] h-[426px] flex relative truncate "
             >
+                
                 <motion.img
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -30,12 +49,12 @@ const Item = ({
                         delay: 0.2,
                     }}
                     src={data.img}
-                    className="rounded-lg image w-[100%] "
+                    className="rounded-lg image w-[100%]  lg:order-1 sm:order-2 "
                 />
             </div>
-            <div className="w-[43%] h-[426px] relative">
-                <div className="absolute right-0 bottom-0">
-                    <div className="flex justify-end gap-[32px]">
+            <div className="lg:w-[80%] h-[426px] sm:h-[120%] lg:h-[100%] sm:w-[100%] relative">
+                <div className="sm:w-[100%] absolute right-0 bottom-10 sm:bottom-[-10px]">
+                    <div className="flex justify-end sm:justify-between gap-[32px] ">
                         <div>
                             <img
                                 onClick={() =>
@@ -57,6 +76,7 @@ const Item = ({
                             />
                         </div>
                     </div>
+                
                 </div>
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -66,10 +86,9 @@ const Item = ({
                         duration: 0.5,
                         delay: 0.2,
                     }}
-                    className="font-BeautiqueDisplay text-[56px] h-[90px] text-left mb-[24px] relative parent"
+                    className="sm:hidden font-BeautiqueDisplay lg:order-2 sm:order-1  text-[56px] sm:text-4xl  h-[90px] sm:h-[auto] text-left mb-[24px] sm:mb-[12px] relative parent"
                 >
                     0{data.id}.<span>{data.btn}</span>
-                    <div className="absolute bottom-0 left-0 w-[30%] h-[5px] bg-primary"></div>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
@@ -80,10 +99,11 @@ const Item = ({
                         delay: 0.2,
                     }}
                     src={data.img}
-                    className="text-left font-interRegular text-lg"
+                    className="text-left font-interRegular text-lg lg:order-3 sm:order-3 "
                 >
                     <p>{data.description}</p>
                 </motion.div>
+                <div className="sm:hidden absolute top-[60px] left-0 w-[30%]  h-[5px] bg-primary"></div>
             </div>
         </section>
     );

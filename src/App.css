@@ -1,12 +1,3 @@
 #root {
     margin: 0 auto;
 }
-@media (max-width: 99px) {
-    .section {
-        flex-direction: column;
-    }
-    .left-side,
-    .right-side {
-        width: 100%;
-    }
-}
