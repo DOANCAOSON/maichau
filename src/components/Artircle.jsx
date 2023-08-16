@@ -4,11 +4,10 @@ import iconHeading from "../assets/img/iconHeading.png";
 import food from "../assets/img/food.png";
 import connguoi from "../assets/img/connguoi.png";
 import time from "../assets/img/time.png";
-import iconleft from "../assets/img/icon-left.png";
-import iconright from "../assets/img/icon-right.png";
 import { useInView } from "framer-motion";
 import "../../src/assets/css/artivre.css";
 import "animate.css";
+import Item from "./Item";
 
 const APIFake = [
     {
@@ -38,6 +37,7 @@ export const Artircle = () => {
     const [selectedItem, setSelectedItem] = useState(0);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [test, settest] = useState(true);
+    const [optionIndex, setOptionIndex] = useState(0);
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false });
@@ -57,6 +57,7 @@ export const Artircle = () => {
         setCurrentIndex(index);
     };
     const handleItemClickRight = () => {
+        console.log("right");
         setSelectedItem(selectedItem + 1);
         setCurrentIndex(
             (prevIndex) => (prevIndex + 1) % APIFake.length
@@ -65,6 +66,8 @@ export const Artircle = () => {
     };
 
     const handleItemClickLeft = () => {
+        console.log("left");
+
         setSelectedItem(selectedItem - 1);
         setCurrentIndex(
             (prevIndex) =>
@@ -82,10 +85,10 @@ export const Artircle = () => {
                 }}
                 className="h-[638px] w-[100%] mt-[56px] flex justify-center"
             >
-                <div className="w-[1120px] h-[740px] transition-all">
-                    <div className="flex justify-between items-center">
-                        <div className="relative h-[90px] w-[30%]">
-                            <ul className="text-colorText text-left text-[32px]">
+                <div className="sm:w[100%] lg:w-[1120px] sm:w-[100%] lg:h-[740px] transition-all">
+                    <div className="flex justify-between items-center flex-wrap">
+                        <div className="relative lg:h-[90px] sm:h-auto  lg:w-[30%] sm:w-[50%] sm:mb-[12px]">
+                            <ul className="text-colorText text-left lg:text-2xl sm:text-lg">
                                 Nét
                                 <span className="font-interBold ml-2">
                                     Tây Bắc
@@ -94,7 +97,7 @@ export const Artircle = () => {
                                 trong từng chi tiết
                             </ul>
                             <img
-                                className="w-[55px] h-[41px] absolute bottom-4 right-0"
+                                className="w-[55px] h-[41px] absolute bottom-0  sm:right-[-20%] lg:right-0 lg:bottom-8"
                                 src={iconHeading}
                             />
                         </div>
@@ -102,7 +105,7 @@ export const Artircle = () => {
                             {APIFake.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="flex justify-between items-center font-interBoldSemiBold"
+                                    className="grid gap-4 font-interBoldSemiBold"
                                 >
                                     <div
                                         style={{
@@ -128,7 +131,7 @@ export const Artircle = () => {
                                                 index
                                             )
                                         }
-                                        className="h-[54px] px-[36px] leading-[54px] rounded-full "
+                                        className="sm:text-base block py-[10px] px-[40px] rounded-[18px] sm:py-[10px] sm:px-[20px] sm:rounded-[18px]"
                                     >
                                         {item.btn}
                                     </div>
@@ -136,100 +139,24 @@ export const Artircle = () => {
                             ))}
                         </div>
                     </div>
-                    <section
-                        ref={ref}
-                        className="mt-[56px] flex gap-[32px] relative  "
-                    >
-                        <div
-                            style={{
-                                transform: isInView
-                                    ? "none"
-                                    : "translateX(-200%)",
-                                opacity: isInView ? 1 : 0,
-                                transition:
-                                    "all 1s ease-out 1.2s",
-                            }}
-                            className="w-[57%] h-[426px] flex relative truncate"
-                        >
-                            <img
-                                src={
-                                    APIFake[currentIndex]
-                                        .img
+                    {APIFake.map((item, indexedDB) => {
+                        return (
+                            <Item
+                                active={
+                                    indexedDB ===
+                                    selectedItem
                                 }
-                                className="rounded-lg  image "
+                                key={`item_${item.id}_${indexedDB}`}
+                                data={item}
+                                handleItemClickRight={
+                                    handleItemClickRight
+                                }
+                                handleItemClickLeft={
+                                    handleItemClickLeft
+                                }
                             />
-                        </div>
-                        <div className="w-[43%] h-[426px] relative">
-                            <div className="absolute right-0 bottom-0">
-                                <div className="flex justify-end gap-[32px]">
-                                    <div>
-                                        <img
-                                            onClick={() =>
-                                                handleItemClickLeft()
-                                            }
-                                            src={iconleft}
-                                            alt="iconl"
-                                            className="h-[48px] w-[48px] transition-all"
-                                        />
-                                    </div>
-                                    <div>
-                                        <img
-                                            onClick={() =>
-                                                handleItemClickRight()
-                                            }
-                                            src={iconright}
-                                            alt="iconr"
-                                            className="h-[48px] w-[48px] "
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                style={{
-                                    transform: isInView
-                                        ? "none"
-                                        : "translateY(-200%)",
-                                    opacity: isInView
-                                        ? 1
-                                        : 0,
-                                    transition:
-                                        "all 1s ease-out 1.2s",
-                                }}
-                                className="font-BeautiqueDisplay text-[56px] h-[90px] text-left mb-[24px] relative parent"
-                            >
-                                0{APIFake[currentIndex].id}.
-                                <span>
-                                    {
-                                        APIFake[
-                                            currentIndex
-                                        ].btn
-                                    }
-                                </span>
-                                <div className="absolute bottom-0 left-0 w-[30%] h-[5px] bg-primary"></div>
-                            </div>
-                            <div
-                                style={{
-                                    transform: isInView
-                                        ? "none"
-                                        : "translateY(200%)",
-                                    opacity: isInView
-                                        ? 1
-                                        : 0,
-                                    transition:
-                                        "all 0.5s ease-out 0.7s",
-                                }}
-                                className="text-left font-interRegular text-lg"
-                            >
-                                <p>
-                                    {
-                                        APIFake[
-                                            currentIndex
-                                        ].description
-                                    }
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+                        );
+                    })}
                 </div>
             </div>
         </div>

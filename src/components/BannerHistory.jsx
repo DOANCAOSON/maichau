@@ -45,58 +45,6 @@ export const BannerHistory = () => {
 
     return (
         <div>
-            {/* <div
-                ref={elementRef}
-                className="banner_container"
-            >
-                <div
-                    style={{
-                        backgroundImage: `url(${bannerHistory})`,
-                    }}
-                    className="h-[305px] flex items-center gap-14"
-                >
-                    <div
-                        style={{
-                            transition: "all 1.2s linear",
-                        }}
-                        className={`w-[30%] h-[100%] flex justify-end items-center px-4 translate-x-[${translateXCu}]`}
-                    >
-                        <div
-                            style={{
-                                backgroundImage: `url(${cu})`,
-                            }}
-                            className="h-[268px] w-[151px] text-[36px] flex  items-center text-end text-colorText font-BeautiqueDisplay "
-                        >
-                            Câu chuyện thương hiệu
-                        </div>
-                    </div>
-
-                    <div className="w-[70%] px-4">
-                        <p
-                            style={{
-                                transition:
-                                    "all 1.2s linear",
-                            }}
-                            className={`w-[75%] text-left font-interRegular text-base translate-x-[${translateXCu1}]`}
-                        >
-                            Vào mùa hè 15 năm trước, một
-                            người con Tây Bắc, vì đam mê lớn
-                            lao với ẩm thực quê mình mà từ
-                            bỏ công việc trong ngành tài
-                            chính để mở một quán ăn nhỏ mang
-                            tên Hằng Mai Châu. Từ đam mê ấy,
-                            từng công thức món ăn độc bản đã
-                            ra đời, thu hút ngày càng nhiều
-                            những tâm hồn yêu ẩm thực miền
-                            núi. Và quán nhỏ mang tên Mai
-                            Châu ấy đã lớn lên từng ngày,
-                            phát triển thành thương hiệu nhà
-                            hàng Tây Bắc vang danh khắp cả
-                            nước của hôm nay.
-                        </p>
-                    </div>
-                </div>
-            </div> */}
             <section ref={ref}>
                 <span
                     style={{
@@ -111,14 +59,14 @@ export const BannerHistory = () => {
                         style={{
                             backgroundImage: `url(${bannerHistory})`,
                         }}
-                        className="h-[305px] flex items-center gap-14"
+                        className=" sm:h-auto lg:h-[305px] flex sm:py-[32px] lg:py-[18px]  "
                     >
                         <div
                             style={{
                                 transition:
                                     "all 1.2s linear",
                             }}
-                            className={`w-[30%] h-[100%] flex justify-end items-center px-4 translate-x-[${translateXCu}]`}
+                            className={`sm:pl-px-[25px] sm:pr-px-[20px] w-[30%] h-auto flex justify-end  px-4 `}
                         >
                             <div
                                 style={{
@@ -132,7 +80,7 @@ export const BannerHistory = () => {
                                     transition:
                                         "all 0.9 ease-out 0.7s",
                                 }}
-                                className="h-[268px] w-[151px] text-[36px] flex  items-center text-end text-colorText font-BeautiqueDisplay "
+                                className="sm:w-[119px] h-[211px] sm:text-lg lg:h-[268px] lg:w-[151px] lg:text-3xl flex  items-center text-end text-colorText font-BeautiqueDisplay "
                             >
                                 Câu chuyện thương hiệu
                             </div>
@@ -150,7 +98,7 @@ export const BannerHistory = () => {
                                     transition:
                                         "all 0.9s ease-out 0.5s",
                                 }}
-                                className={`animate__animated animate__bounce w-[75%] text-left font-interRegular text-base translate-x-[${translateXCu1}]`}
+                                className={`w-[100%] text-left font-interRegular text-base m-0`}
                             >
                                 Vào mùa hè 15 năm trước, một
                                 người con Tây Bắc, vì đam mê

@@ -22,7 +22,17 @@ export default {
         'interBold': ['interBold', ' Tahoma', 'sans-serif'],
         'interBoldSemiBold': ['interBoldSemiBold', ' Tahoma', 'sans-serif'],
 
-      }
+      },
+      screens: {
+        'sm': '100px',
+        // => @media (min-width: 640px) { ... }
+
+        'laptop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'lg': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [],

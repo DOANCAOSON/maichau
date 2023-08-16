@@ -7,7 +7,7 @@ import { Footers } from "../components/Footers";
 
 export const Home = () => {
     return (
-        <div className="h-[3000px]">
+        <div className="h-auto">
             <div>
                 <Header />
                 <Slider />
