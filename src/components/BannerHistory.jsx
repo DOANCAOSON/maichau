@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import bannerHistory from "../assets/img/banerhistory.png";
 import cu from "../assets/img/cu.png";
 import { useInView } from "framer-motion";
@@ -35,8 +34,7 @@ export const BannerHistory = () => {
                                                 isInView
                                                     ? 1
                                                     : 1,
-                                            transition:
-                                                "all 0.9s ease-out 1s",
+                                                    transition: "all 0.5s ease-out 0.8s",
                                         }}
                                         className="sm:text-[28px] leading-[140%] h-[268px] w-[151px] text-end items-center  text-4xl sm:text-lg sm:h-[250px] sm:w-[119px] flex text-colorText font-BeautiqueDisplay "
                                     >
@@ -55,8 +53,7 @@ export const BannerHistory = () => {
                                                 isInView
                                                     ? "none"
                                                     : "translateX(100%)",
-                                            transition:
-                                                "all 0.9s ease-out 1s",
+                                                    transition: "all 0.5s ease-out 0.8s",
                                         }}
                                         className="sm:w-[100%] leading-[140%] text-left font-interRegular text-base m-0"
                                     >

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../src/assets/img/logo.png";
 import bar from "../../src/assets/img/Vector.png";
+import "animate.css";
 
 export const Header = (isOpen) => {
     return (
@@ -21,32 +22,20 @@ export const Header = (isOpen) => {
                         >
                             Về chúng tôi
                         </a>
-                        <a
-                            href="#"
-                            className="leading-[40px] "
-                        >
+                        <a href="#" className="leading-[40px] ">
                             Thực Đơn
                         </a>
-                        <a
-                            href="#"
-                            className=" leading-[40px] "
-                        >
+                        <a href="#" className=" leading-[40px] ">
                             Tin Tức
                         </a>
-                        <a
-                            href="#"
-                            className=" leading-[40px] "
-                        >
+                        <a href="#" className=" leading-[40px] ">
                             Hình ảnh
                         </a>
-                        <a
-                            href="#"
-                            className=" leading-[40px] "
-                        >
+                        <a href="#" className=" leading-[40px] ">
                             Tuyển dụng
                         </a>
                         <a className="ml-[54px]" href="#">
-                            <button className="sm:h-[33px]  lg:h-[54px] w-[189px] h-[54px]  font-Inter rounded-full bg-backgroundColorWhite text-colorText text-base font-bold">
+                            <button className="animate__animated animate__swing animate__headshake sm:h-[33px] lg:h-[54px] w-[189px] h-[54px] font-Inter rounded-full bg-backgroundColorWhite text-colorText text-base font-bold">
                                 Đặt Bàn ngày
                             </button>
                         </a>
