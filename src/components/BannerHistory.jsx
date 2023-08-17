@@ -11,78 +11,84 @@ export const BannerHistory = () => {
     return (
         <div>
             <section ref={ref}>
-                <span
-                    style={{
-                        transform: isInView
-                            ? "none"
-                            : "translateX(-200px)",
-                        opacity: isInView ? 1 : 0,
-                        transition: "all 0.9s ease-out 1s",
-                    }}
-                >
+                <div>
                     <div
                         style={{
                             backgroundImage: `url(${bannerHistory})`,
                         }}
-                        className="sm:h-[100%] h-[500px] lg:h-[305px] flex sm:py-[32px] lg:py-[18px]  "
+                        className="sm:h-[100%] h-[500px] lg:h-[305px] flex sm:py-[32px] py-[18px]  "
                     >
-                        <div className=" flex items-center sm:items-start m-auto ">
-                            <motion.div
-                                initial={{ opacity: 0, x: -100 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ amount: true }}
-                                transition={{
-                                    duration: 0.5,
-                                    delay: 0.2,
-                                }}
-                                className={`sm:pl-px-[25px] sm:pr-px-[20px] w-[30%] h-auto flex justify-end  px-4 `}
-                            >
-                                <div
-                                    style={{
-                                        backgroundImage: `url(${cu})`,
-                                    }}
+                        <div className="w-[814px]  flex m-auto">
+                            <div className="flex gap-8 items-center sm:items-start m-auto ">
+                                <div className="overflow-hidden  sm:pl-px-[25px]  sm:pr-px-[20px] w-[30%] h-auto flex justify-end px-4 ">
+                                    <div
+                                        style={{
+                                            background: `url(${cu}) no-repeat`,
+                                            backgroundSize:
+                                                "cover",
 
-                                    className="h-[260px] w-[129px] text-4xl sm:text-lg sm:h-[250px]  flex  items-center text-end text-colorText font-BeautiqueDisplay "
-                                >
-                                    Câu chuyện thương hiệu
+                                            transform:
+                                                isInView
+                                                    ? "none"
+                                                    : "translateX(-200%)",
+                                            opacity:
+                                                isInView
+                                                    ? 1
+                                                    : 1,
+                                            transition:
+                                                "all 0.9s ease-out 1s",
+                                        }}
+                                        className="sm:text-[28px] leading-[140%] h-[268px] w-[151px] text-end items-center  text-4xl sm:text-lg sm:h-[250px] sm:w-[119px] flex text-colorText font-BeautiqueDisplay "
+                                    >
+                                        Câu chuyện thương
+                                        hiệu
+                                    </div>
                                 </div>
-                            </motion.div>
+                                <div className="overflow-hidden w-[70%]">
+                                    <p
+                                        style={{
+                                            background: `url(${cu}) no-repeat`,
+                                            backgroundSize:
+                                                "cover",
 
-                            <motion.div
-                                initial={{ opacity: 0, x: 100 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ amount: true }}
-                                transition={{
-                                    duration: 0.5,
-                                    delay: 0.2,
-                                }}
-                                className="w-[70%] px-4">
-                                <p
-
-                                    className={`w-[60%] sm:w-[100%] text-left font-interRegular text-base m-0`}
-                                >
-                                    Vào mùa hè 15 năm trước, một
-                                    người con Tây Bắc, vì đam mê
-                                    lớn lao với ẩm thực quê mình
-                                    mà từ bỏ công việc trong
-                                    ngành tài chính để mở một
-                                    quán ăn nhỏ mang tên Hằng
-                                    Mai Châu. Từ đam mê ấy, từng
-                                    công thức món ăn độc bản đã
-                                    ra đời, thu hút ngày càng
-                                    nhiều những tâm hồn yêu ẩm
-                                    thực miền núi. Và quán nhỏ
-                                    mang tên Mai Châu ấy đã lớn
-                                    lên từng ngày, phát triển
-                                    thành thương hiệu nhà hàng
-                                    Tây Bắc vang danh khắp cả
-                                    nước của hôm nay.
-                                </p>
-                            </motion.div>
-
+                                            transform:
+                                                isInView
+                                                    ? "none"
+                                                    : "translateX(100%)",
+                                            transition:
+                                                "all 0.9s ease-out 1s",
+                                        }}
+                                        className="sm:w-[100%] leading-[140%] text-left font-interRegular text-base m-0"
+                                    >
+                                        Vào mùa hè 15 năm
+                                        trước, một người con
+                                        Tây Bắc, vì đam mê
+                                        lớn lao với ẩm thực
+                                        quê mình mà từ bỏ
+                                        công việc trong
+                                        ngành tài chính để
+                                        mở một quán ăn nhỏ
+                                        mang tên Hằng Mai
+                                        Châu. Từ đam mê ấy,
+                                        từng công thức món
+                                        ăn độc bản đã ra
+                                        đời, thu hút ngày
+                                        càng nhiều những tâm
+                                        hồn yêu ẩm thực miền
+                                        núi. Và quán nhỏ
+                                        mang tên Mai Châu ấy
+                                        đã lớn lên từng
+                                        ngày, phát triển
+                                        thành thương hiệu
+                                        nhà hàng Tây Bắc
+                                        vang danh khắp cả
+                                        nước của hôm nay.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </span>
+                </div>
             </section>
         </div>
     );

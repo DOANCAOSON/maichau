@@ -1,23 +1,20 @@
 import React from "react";
 import logo from "../../src/assets/img/logo.png";
 import bar from "../../src/assets/img/Vector.png";
-import { useAnimate, stagger } from "framer-motion";
 
 export const Header = (isOpen) => {
-    const [scope, animate] = useAnimate();
-
     return (
         <div className="w-[100%] flex justify-center bg-primary">
-            <div className="sm:w-[100%] sm:h-[73px] sm:px-[2]  lg:w-[1120px] lg:h-[126px] m-auto flex justify-between items-center">
-                <a href="#" className="w-[20%]">
+            <div className="w-[1120px] flex  items-center sm:w-[100%] sm:h-[73px] sm:px-[2px]">
+                <a href="#" className="w-[20%] ">
                     <img
-                        className="lg:h-[100px] sm:ml-[20px]  lg:w-[100px] sm:mr-[4px] sm:w-[48px] sm:h-[31]"
+                        className="h-[126px] w-[126px] sm:w-[48px] sm:h-[31px] sm:ml-[20px] sm:mr-[4px]"
                         src={logo}
                         alt="logo"
                     />
                 </a>
-                <div className="flex items-center w-[80%] ">
-                    <div className="sm:hidden lg:flex flex gap-x-[40px] justify-end items-center  font-BeautiqueDisplay  text-color ">
+                <div className="flex items-center justify-end w-[80%] ">
+                    <div className="sm:hidden flex gap-x-[40px] justify-end items-center font-BeautiqueDisplay text-color ">
                         <a
                             href="#"
                             className="leading-[40px]  border-b-[3px] border-backgroundColorWhite "
@@ -48,14 +45,14 @@ export const Header = (isOpen) => {
                         >
                             Tuyển dụng
                         </a>
+                        <a className="ml-[54px]" href="#">
+                            <button className="sm:h-[33px]  lg:h-[54px] w-[189px] h-[54px]  font-Inter rounded-full bg-backgroundColorWhite text-colorText text-base font-bold">
+                                Đặt Bàn ngày
+                            </button>
+                        </a>
                     </div>
                 </div>
-                <div className="flex">
-                    <button className="sm:h-[33px]  lg:h-[54px] w-[189px] h-[54px] ml-[20%] font-Inter rounded-full  bg-backgroundColorWhite text-colorText text-base font-bold">
-                        Đặt Bàn ngày
-                    </button>
-                </div>
-                <div className="lg:hidden sm:ml-[20px] sm:mr-[20px] w-[32px] ml-[12px] ">
+                <div className="hidden sm:block sm:ml-[20px] sm:mr-[20px] w-[32px] h-[32px] ml-[12px] ">
                     <img src={bar} alt="" />
                 </div>
             </div>

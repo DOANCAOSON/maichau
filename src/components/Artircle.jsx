@@ -47,7 +47,7 @@ export const Artircle = () => {
         if (selectedItem <= -1) {
             setSelectedItem(2);
         }
-        return () => { };
+        return () => {};
     }, [selectedItem]);
 
     const handleItemClick = (index) => {
@@ -75,66 +75,51 @@ export const Artircle = () => {
                     backgroundImage: `url(${cu})`,
                     backgroundRepeat: "no-repeat",
                 }}
-                className="h-[638px] relative   sm:h-auto lg:pb-0 sm:pb-[90px] w-[100%] mt-[56px] flex justify-center sm:px-[20px] sm:py-[32px]"
+                className="h-[638px] relative sm:h-auto lg:pb-0 sm:pb-[90px] w-[100%] mt-[56px] flex justify-center sm:px-[20px] sm:py-[32px]"
             >
-                {/* <div className="lg:hidden sm:flex absolute bottom-0 sm:px-[20px]  sm:w-[100%] lg:justify-end gap-[32px] sm:justify-between ">
-                        <div>
-                            <img
-                                onClick={() =>
-                                    handleItemClickLeft()
-                                }
-                                src={iconleft}
-                                alt="iconl"
-                                className="h-[48px] w-[48px] transition-all"
-                            />
-                        </div>
-                        <div>
-                            <img
-                                onClick={() =>
-                                    handleItemClickRight()
-                                }
-                                src={iconright}
-                                alt="iconr"
-                                className="h-[48px] w-[48px] "
-                            />
-                        </div>
-                    </div> */}
                 <div className="sm:w[100%] lg:w-[1120px] sm:w-[100%] lg:h-[740px] transition-all">
                     <div className="flex justify-between items-center flex-wrap">
-                        <div className="relative lg:h-[90px]  lg:w-[30%] sm:w-[50%] sm:mb-[12px]">
-                            <ul className="text-colorText text-left lg:text-2xl sm:text-lg">
+                        <div className="lg:h-[90px] w-[50%] sm:w-[100%] sm:mb-[12px]">
+                            <ul className="text-colorText text-left text-[32px] sm:text-lg">
                                 Nét
-                                <span className="font-interBold ml-2">
+                                <span className="font-interBold ml-2 text-[32px] sm:text-lg">
                                     Tây Bắc
                                 </span>
                                 <br />
-                                trong từng chi tiết
+                                <div className="w-[100%] flex items-center ">
+                                    <div className="flex mr-9 text-[32px] sm:text-lg">
+                                        trong từng chi tiết
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="w-[55px] h-[41px] "
+                                            src={
+                                                iconHeading
+                                            }
+                                        />
+                                    </div>
+                                </div>
                             </ul>
-                            <img
-                                className="w-[55px] h-[41px] absolute bottom-0  sm:right-[-20%] lg:right-0 lg:bottom-8"
-                                src={iconHeading}
-                            />
                         </div>
-                        <div className="grid grid-cols-3 gap-4 sm:grid-cols-2 sm:text-base font-inter500 ">
+                        <div className="grid grid-cols-3 gap-6 sm:gap-3 sm:grid-cols-2 sm:text-base font-inter500 ">
                             {APIFake.map((item, index) => (
-
                                 <div
                                     key={index}
                                     style={{
                                         backgroundColor:
                                             selectedItem ===
-                                                index
+                                            index
                                                 ? "#A82825"
                                                 : "#FFFFFF",
                                         cursor: "pointer",
                                         color:
                                             selectedItem ===
-                                                index
+                                            index
                                                 ? "#FFFFFF"
                                                 : "#888888",
                                         border:
                                             selectedItem ===
-                                                index
+                                            index
                                                 ? "none"
                                                 : "1px solid #888888",
                                     }}
@@ -143,11 +128,10 @@ export const Artircle = () => {
                                             index
                                         )
                                     }
-                                    className="font-interBoldSemiBold   sm:text-base block py-[10px] px-[40px] rounded-[18px] sm:py-[10px] sm:px-[20px] sm:rounded-[18px]"
+                                    className="text-center font-interBoldSemiBold sm:text-base block py-[16px] px-[32px] rounded-full sm:py-[10px] sm:px-[20px]"
                                 >
                                     {item.btn}
                                 </div>
-
                             ))}
                         </div>
                     </div>
@@ -166,7 +150,6 @@ export const Artircle = () => {
                                 handleItemClickLeft={
                                     handleItemClickLeft
                                 }
-
                             />
                         );
                     })}

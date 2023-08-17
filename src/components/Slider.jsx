@@ -4,11 +4,17 @@ import slider from "../assets/img/slider.png";
 export const Slider = () => {
     return (
         <div>
-            <div className="h-[520px] relative">
-                <img src={slider} alt="slider" />
-                <h1 className=" sm:text-[32px]  font-BeautiqueDisplayMedium lg:text-[56px] text-color absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
+            <div
+                style={{
+                    background:
+                        " url(/src/assets/img/slider.png)  no-repeat ",
+                    backgroundSize: " cover",
+                }}
+                className="flex justify-center items-center w-[100%] h-[520px] sm:h-[228px]"
+            >
+                <div className="sm:text-[32px] text-[56px] text-color font-BeautiqueDisplayMedium  ">
                     Về chúng tôi
-                </h1>
+                </div>
             </div>
         </div>
     );
