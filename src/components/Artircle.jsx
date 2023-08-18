@@ -91,7 +91,7 @@ export const Artircle = () => {
             >
                 <div
                     ref={ref1}
-                    className="sm:w[100%] lg:w-[1120px] sm:w-[100%] lg:h-[740px] "
+                    className="sm:w[100%] w-[1120px] sm:w-[100%] "
                 >
                     <div className="flex justify-between items-center flex-wrap">
                         <div className="lg:h-[90px] w-[50%] sm:w-[100%] sm:mb-[12px]">
