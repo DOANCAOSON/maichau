@@ -18,22 +18,40 @@ export const Header = (isOpen) => {
                     <div className="sm:hidden flex gap-x-[40px] justify-end items-center font-BeautiqueDisplay text-color ">
                         <a
                             href="#"
-                            className="leading-[40px]  border-b-[3px] border-backgroundColorWhite "
+                            className="container1 leading-[40px] "
                         >
                             Về chúng tôi
+                            <div class="border"></div>
                         </a>
-                        <a href="#" className="leading-[40px] ">
+                        <a
+                            href="#"
+                            className="container1 leading-[40px] "
+                        >
                             Thực Đơn
+                            <div class="border"></div>
                         </a>
-                        <a href="#" className=" leading-[40px] ">
+                        <a
+                            href="#"
+                            className="container1 leading-[40px] "
+                        >
                             Tin Tức
+                            <div class="border"></div>
                         </a>
-                        <a href="#" className=" leading-[40px] ">
+                        <a
+                            href="#"
+                            className="container1 leading-[40px] "
+                        >
                             Hình ảnh
+                            <div class="border"></div>
                         </a>
-                        <a href="#" className=" leading-[40px] ">
+                        <a
+                            href="#"
+                            className="container1 leading-[40px] "
+                        >
                             Tuyển dụng
+                            <div class="border"></div>
                         </a>
+                        
                         <a className="ml-[54px]" href="#">
                             <button className="animate__animated animate__swing animate__headshake sm:h-[33px] lg:h-[54px] w-[189px] h-[54px] font-Inter rounded-full bg-backgroundColorWhite text-colorText text-base font-bold">
                                 Đặt Bàn ngày

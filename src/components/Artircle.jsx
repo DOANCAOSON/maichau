@@ -48,7 +48,7 @@ export const Artircle = () => {
 
     const ref = useRef(null);
     const ref1 = useRef(null);
-    const isInView = useInView(ref, { once: false });
+    const isInView1 = useInView(ref1, { once: false });
 
     useEffect(() => {
         if (selectedItem >= APIFake.length) {
@@ -68,14 +68,18 @@ export const Artircle = () => {
         setSelectedItem(selectedItem + 1);
         settest(false);
         setCurrentIndex(
-            (prevIndex) => (prevIndex + 1 + APIFake.length) % APIFake.length
+            (prevIndex) =>
+                (prevIndex + 1 + APIFake.length) %
+                APIFake.length
         );
     };
 
     const handleItemClickLeft = () => {
         setSelectedItem(selectedItem - 1);
         setCurrentIndex(
-            (prevIndex) => (prevIndex - 1 + APIFake.length) % APIFake.length
+            (prevIndex) =>
+                (prevIndex - 1 + APIFake.length) %
+                APIFake.length
         );
     };
 
@@ -88,19 +92,22 @@ export const Artircle = () => {
                 }}
                 className="h-[638px] relative sm:h-auto pb-0 sm:bg-none sm:pb-[90px] w-[100%] mt-[56px] flex justify-center sm:px-[20px] sm:py-[32px]"
             >
-                <div className="sm:w[100%] lg:w-[1120px] sm:w-[100%] lg:h-[740px] transition-all">
+                <div
+                    ref={ref1}
+                    className="sm:w[100%] lg:w-[1120px] sm:w-[100%] lg:h-[740px] "
+                >
                     <div className="flex justify-between items-center flex-wrap">
-                        <div
-                            ref={ref}
-                            className="lg:h-[90px] w-[50%] sm:w-[100%] sm:mb-[12px]"
-                        >
+                        <div className="lg:h-[90px] w-[50%] sm:w-[100%] sm:mb-[12px]">
                             <ul
                                 style={{
-                                    transform: isInView
+                                    transform: isInView1
                                         ? "none"
                                         : "translateY(-200%)",
-                                    opacity: isInView ? 1 : 0,
-                                    transition: "all 0.7s ease-out 1.2s",
+                                    opacity: isInView1
+                                        ? 1
+                                        : 0,
+                                    transition:
+                                        "all 0.7s ease-out 1.2s",
                                 }}
                                 className="text-colorText text-left text-[32px] sm:text-lg"
                             >
@@ -116,7 +123,9 @@ export const Artircle = () => {
                                     <div>
                                         <img
                                             className="w-[55px] h-[41px] "
-                                            src={iconHeading}
+                                            src={
+                                                iconHeading
+                                            }
                                         />
                                     </div>
                                 </div>
@@ -124,11 +133,12 @@ export const Artircle = () => {
                         </div>
                         <div
                             style={{
-                                transform: isInView
+                                transform: isInView1
                                     ? "none"
                                     : "translateY(-200%)",
-                                opacity: isInView ? 1 : 0,
-                                transition: "all 0.7s ease-out 1.2s",
+                                opacity: isInView1 ? 1 : 0,
+                                transition:
+                                    "all 0.7s ease-out 1.2s",
                             }}
                             className="grid grid-cols-3 gap-6 sm:gap-3 sm:grid-cols-2 sm:text-base font-inter500 "
                         >
@@ -137,20 +147,27 @@ export const Artircle = () => {
                                     key={index}
                                     style={{
                                         backgroundColor:
-                                            selectedItem === index
+                                            selectedItem ===
+                                            index
                                                 ? "#A82825"
                                                 : "#FFFFFF",
                                         cursor: "pointer",
                                         color:
-                                            selectedItem === index
+                                            selectedItem ===
+                                            index
                                                 ? "#FFFFFF"
                                                 : "#888888",
                                         border:
-                                            selectedItem === index
+                                            selectedItem ===
+                                            index
                                                 ? "none"
                                                 : "1px solid #888888",
                                     }}
-                                    onClick={() => handleItemClick(index)}
+                                    onClick={() =>
+                                        handleItemClick(
+                                            index
+                                        )
+                                    }
                                     className=" text-center font-interBoldSemiBold sm:text-base block py-[16px] px-[32px] rounded-full sm:py-[10px] sm:px-[20px] hover:bg-primary"
                                 >
                                     {item.btn}
@@ -159,47 +176,78 @@ export const Artircle = () => {
                         </div>
 
                         <section className="mt-[56px] flex sm:flex-wrap gap-[32px] relative  ">
-                            <div
+                            {/* <div
                                 style={{
-                                    transform: isInView
+                                    transform: isInView1
                                         ? "none"
                                         : "translateX(-300%)",
-                                    opacity: isInView ? 1 : 1,
-                                    transition: "all 0.7s ease-out 1.2s",
+                                    opacity: isInView1
+                                        ? 1
+                                        : 1,
+                                    transition:
+                                        "all 0.7s ease-out 1.2s",
                                 }}
                                 className="w-[57%] h-[426px] sm:w-[100%] flex relative truncate "
                             >
                                 <img
                                     className="rounded-lg  image "
-                                    src={APIFake[currentIndex].img}
+                                    src={
+                                        APIFake[
+                                            currentIndex
+                                        ].img
+                                    }
                                 />
                             </div>
-                            <div className="sm:w-[100%] w-[43%] h-[426px] relative">
+                            <div className="sm:w-[100%] w-[43%]  overflow-hidden h-[426px] relative">
                                 <div
                                     style={{
-                                        transform: isInView
+                                        transform: isInView1
                                             ? "none"
                                             : "translatex(300%)",
-                                        opacity: isInView ? 1 : 1,
-                                        transition: "all 0.7s ease-out 1.2s",
+                                        opacity: isInView1
+                                            ? 1
+                                            : 1,
+                                        transition:
+                                            "all 0.7s ease-out 1.2s",
                                     }}
                                     className=" sm:w-[100%] font-BeautiqueDisplay text-[56px] sm:text-[40px] text-left mb-[24px] relative parent"
                                 >
-                                    0{APIFake[currentIndex].id}.
-                                    <span>{APIFake[currentIndex].btn}</span>
+                                    0
+                                    {
+                                        APIFake[
+                                            currentIndex
+                                        ].id
+                                    }
+                                    .
+                                    <span>
+                                        {
+                                            APIFake[
+                                                currentIndex
+                                            ].btn
+                                        }
+                                    </span>
                                     <div className="absolute bottom-0 left-0 w-[30%] h-[5px] bg-primary"></div>
                                 </div>
                                 <div
                                     style={{
-                                        transform: isInView
+                                        transform: isInView1
                                             ? "none"
                                             : "translateX(300%)",
-                                        opacity: isInView ? 1 : 1,
-                                        transition: "all 0.7s ease-out 1.2s",
+                                        opacity: isInView1
+                                            ? 1
+                                            : 1,
+                                        transition:
+                                            "all 0.7s ease-out 1.2s",
                                     }}
                                     className="text-left font-interRegular text-lg"
                                 >
-                                    <p>{APIFake[currentIndex].description}</p>
+                                    <p>
+                                        {
+                                            APIFake[
+                                                currentIndex
+                                            ].description
+                                        }
+                                    </p>
                                 </div>
                             </div>
 
@@ -207,7 +255,9 @@ export const Artircle = () => {
                                 <div className="flex justify-end sm:justify-between gap-[32px]">
                                     <div>
                                         <HiArrowLeft
-                                            style={{ fontSize: 24 }}
+                                            style={{
+                                                fontSize: 24,
+                                            }}
                                             onClick={() =>
                                                 handleItemClickLeft()
                                             }
@@ -222,7 +272,118 @@ export const Artircle = () => {
                                     </div>
                                     <div>
                                         <HiArrowRight
-                                            style={{ fontSize: 24 }}
+                                            style={{
+                                                fontSize: 24,
+                                            }}
+                                            onClick={() =>
+                                                handleItemClickRight()
+                                            }
+                                            className="bg-#11111 hidden sm:block "
+                                        />
+                                        <HiOutlineArrowCircleRight
+                                            onClick={() =>
+                                                handleItemClickRight()
+                                            }
+                                            className="h-[48px] w-[48px] sm:hidden "
+                                        />
+                                    </div>
+                                </div>
+                            </div> */}
+
+                            <div class="payment-address-form">
+                                <div
+                                    style={{
+                                        transform: isInView1
+                                            ? "none"
+                                            : "translatex(300%)",
+                                        opacity: isInView1
+                                            ? 1
+                                            : 1,
+                                        transition:
+                                            "all 0.7s ease-out 1.2s",
+                                    }}
+                                    className=" sm:w-[100%] font-BeautiqueDisplay text-[56px] sm:text-[40px] text-left mb-[24px] relative parent"
+                                >
+                                    0
+                                    {
+                                        APIFake[
+                                            currentIndex
+                                        ].id
+                                    }
+                                    .
+                                    <span>
+                                        {
+                                            APIFake[
+                                                currentIndex
+                                            ].btn
+                                        }
+                                    </span>
+                                    <div className="absolute bottom-0 left-0 w-[30%] h-[5px] bg-primary"></div>
+                                </div>
+                                <img
+                                    style={{
+                                        transform: isInView1
+                                            ? "none"
+                                            : "translateX(-300%)",
+                                        opacity: isInView1
+                                            ? 1
+                                            : 1,
+                                        transition:
+                                            "all 0.7s ease-out 1.2s",
+                                    }}
+                                    s
+                                    src={
+                                        APIFake[
+                                            currentIndex
+                                        ].img
+                                    }
+                                />
+                                <div
+                                    style={{
+                                        transform: isInView1
+                                            ? "none"
+                                            : "translateX(300%)",
+                                        opacity: isInView1
+                                            ? 1
+                                            : 1,
+                                        transition:
+                                            "all 0.7s ease-out 1.2s",
+                                    }}
+                                    className="text-left font-interRegular text-lg sm:pb-10 sm:mt-20px"
+                                >
+                                    <p>
+                                        {
+                                            APIFake[
+                                                currentIndex
+                                            ].description
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                            <div className=" sm:w-[100%] absolute right-0 bottom-0">
+                                <div className="flex justify-end sm:justify-between gap-[32px]">
+                                    <div>
+                                        <HiArrowLeft
+                                            style={{
+                                                fontSize: 24,
+                                            }}
+                                            onClick={() =>
+                                                handleItemClickLeft()
+                                            }
+                                            className="hidden sm:block"
+                                        />
+                                        <HiOutlineArrowCircleLeft
+                                            onClick={() =>
+                                                handleItemClickLeft()
+                                            }
+                                            className="h-[48px] w-[48px]  sm:hidden"
+                                        />
+                                    </div>
+                                    <div>
+                                        <HiArrowRight
+                                            style={{
+                                                fontSize: 24,
+                                            }}
                                             onClick={() =>
                                                 handleItemClickRight()
                                             }
