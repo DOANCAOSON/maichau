@@ -13,18 +13,18 @@ export const BannerHistory = () => {
                 <div>
                     <div
                         style={{
-                            backgroundImage: `url(${bannerHistory})`,
+                            background: `url(${bannerHistory}) contain `,
                         }}
-                        className="sm:h-[100%] h-[500px] lg:h-[305px] flex sm:py-[32px] py-[18px] bg-no-repeat  "
+                        className="sm:h-[100%] h-[305px] flex sm:py-[32px] py-[18px] bg-no-repeat"
                     >
                         <div className="w-[814px]  flex m-auto">
-                            <div className="flex gap-8 items-center sm:items-start m-auto ">
-                                <div className="overflow-hidden  sm:pl-px-[25px]  sm:pr-px-[20px] w-[30%] h-auto flex justify-end px-4 ">
+                            <div className="flex gap-[35px] items-center sm:items-start m-auto ">
+                                <div className="overflow-hidden sm:pl-px-[25px] sm:pr-px-[20px] w-[20%] h-auto flex justify-end">
                                     <div
                                         style={{
                                             background: `url(${cu}) no-repeat`,
                                             backgroundSize:
-                                                "cover",
+                                                "auto",
 
                                             transform:
                                                 isInView
@@ -43,7 +43,7 @@ export const BannerHistory = () => {
                                         hiệu
                                     </div>
                                 </div>
-                                <div className="overflow-hidden w-[70%]">
+                                <div className="overflow-hidden w-[80%]">
                                     <p
                                         style={{
                                             transform:

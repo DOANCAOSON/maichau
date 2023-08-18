@@ -7,7 +7,7 @@ export const Header = (isOpen) => {
     return (
         <div className="w-[100%] flex justify-center bg-primary">
             <div className="w-[1120px] flex  items-center sm:w-[100%] sm:h-[73px] sm:px-[2px]">
-                <a href="#" className="w-[20%] ">
+                <a href="#" className="w-[15.8%] ">
                     <img
                         className="h-[126px] w-[126px] sm:w-[48px] sm:h-[31px] sm:ml-[20px] sm:mr-[4px]"
                         src={logo}
@@ -51,7 +51,7 @@ export const Header = (isOpen) => {
                             Tuyển dụng
                             <div class="border"></div>
                         </a>
-                        
+
                         <a className="ml-[54px]" href="#">
                             <button className="animate__animated animate__swing animate__headshake sm:h-[33px] lg:h-[54px] w-[189px] h-[54px] font-Inter rounded-full bg-backgroundColorWhite text-colorText text-base font-bold">
                                 Đặt Bàn ngày
