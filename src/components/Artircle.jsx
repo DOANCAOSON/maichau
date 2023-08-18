@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import cu from "../assets/img/cu2.svg";
 import iconHeading from "../assets/img/iconHeading.png";
 import food from "../assets/img/food.png";
 import connguoi from "../assets/img/connguoi.png";
@@ -84,10 +83,9 @@ export const Artircle = () => {
         <div>
             <div
                 style={{
-                    backgroundImage: `url(${cu})`,
                     backgroundRepeat: "no-repeat",
                 }}
-                className="h-[638px] relative sm:h-auto pb-0 sm:bg-none sm:pb-[90px] w-[100%] mt-[56px] flex justify-center sm:px-[20px] sm:py-[32px]"
+                className="test h-[638px]  relative sm:h-auto pb-0 sm:bg-none sm:pb-[90px] w-[100%] mt-[56px] flex justify-center sm:px-[20px] sm:py-[32px]"
             >
                 <div
                     ref={ref1}

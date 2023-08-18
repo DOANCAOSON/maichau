@@ -93,3 +93,7 @@
         grid-column: 1;
     }
 }
+
+.test{
+    background-image: url(./assets/img/cu2.svg)
+}
