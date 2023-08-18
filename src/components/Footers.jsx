@@ -5,7 +5,7 @@ import logofooter from "../../src/assets/img/logomaichaufooter.svg";
 export const Footers = () => {
     return (
         <div className="bg-primary h-auto pt-[68px] px-[20px] py-[40px]">
-            <div className="grid gap-4 lg:grid-cols-3 sm:grid-cols-1 m-auto lg:w-[1120px]">
+            <div className="grid gap-[80px] grid-cols-3 sm:grid-cols-1  m-auto lg:w-[1120px]">
                 <div className="pb-[32px]">
                     <img
                         className="w-[157px] h-[100px]"
