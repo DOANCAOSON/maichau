@@ -4,15 +4,15 @@ import logofooter from "../../src/assets/img/logomaichaufooter.svg";
 export const Footers = () => {
     return (
         <div className="bg-primary h-auto pt-[68px] px-[20px] py-[40px]">
-            <div className="flex sm:flex-wrap gap-[99px] m-auto w-[1121px]">
+            <div className="flex sm:flex-wrap gap-[99px] sm:gap-[32px] m-auto w-[1121px]">
                 <div className="sm:w-[100%]">
-                    <div className="w-[157px]  h-[100px] sm:w-[126px] sm:h-[80px]">
+                    <div className="w-[157px] h-[100px] sm:w-[126px] sm:h-[80px]">
                         <img src={logofooter} />
                     </div>
                 </div>
-                <div className="flex sm:flex-wrap gap-[88px]">
+                <div className="grid grid-cols-2 sm:grid-cols-1 gap-[88px] sm:gap-[0px]">
                     <div className="text-left sm:w-[100%] text-color ">
-                        <ul className="font-BeautiqueDisplay mb-4 pb-[20px]">
+                        <ul className="font-BeautiqueDisplay mb-4 sm:mb-[12px] pb-[20px] w-[352px]">
                             <li className="font-BeautiqueDisplay text-[18px] mb-5">
                                 Địa chỉ
                             </li>
@@ -28,31 +28,31 @@ export const Footers = () => {
                                 Cơ sở ĐN: 55 - 61 Hồ Nghinh, P. Phước Mỹ, Q. Sơn
                                 Trà, Đà Nẵng
                             </li>
-                            <li className="font-interRegular text-base mb-2">
+                            <li className="font-interRegular text-base mb-2 sm:mb-0">
                                 Cơ sở HB: Tổ Ngọc 2, P. Trung Minh, Kỳ Sơn, Hòa
                                 Bình
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <div className="grid sm:w-[100%] gap-[88px]  grid-cols-2 sm:grid-cols-1 ">
+                        <div className="grid sm:w-[100%] gap-[88px] sm:gap-[0px]  grid-cols-2 sm:grid-cols-1 ">
                             <div className="font-interRegular text-base text-color">
                                 <ul>
-                                    <li className="font-BeautiqueDisplay text-[18px] mb-5">
+                                    <li className="font-BeautiqueDisplay text-[18px] mb-5 sm:mb-[20px]">
                                         Thời gian mở cửa
                                     </li>
-                                    <li className="font-interRegular text-base mb-8">
+                                    <li className="font-interRegular text-base mb-8 sm:mb-[36px]">
                                         6:30 – 21:30 Monday - Sunday
                                     </li>
                                 </ul>
                             </div>
                             <div className="font-interRegular text-base text-color">
                                 <ul className="font-BeautiqueDisplay">
-                                    <li className="font-BeautiqueDisplay text-[18px] mb-5">
+                                    <li className="font-BeautiqueDisplay text-[18px] mb-5 sm:sm:mb-[20px]">
                                         Liên hệ
                                     </li>
 
-                                    <li className="font-interRegular text-base mb-8">
+                                    <li className="font-interRegular text-base mb-8 sm:mb-[36px]">
                                         0123456789 MaichauHN@gmail.com
                                     </li>
                                 </ul>
