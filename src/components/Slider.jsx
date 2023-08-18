@@ -6,8 +6,7 @@ export const Slider = () => {
         <div>
             <div
                 style={{
-                    background:
-                        " url(/src/assets/img/slider.png)",
+                    backgroundImage: `url(${slider})`,
                     backgroundSize: " cover",
                 }}
                 className="flex justify-center items-center w-[100%] h-[520px] sm:h-[228px]"
