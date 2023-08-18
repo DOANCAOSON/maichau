@@ -6,9 +6,7 @@ import connguoi from "../assets/img/connguoi.png";
 import time from "../assets/img/time.png";
 import { useInView } from "framer-motion";
 import "../../src/assets/css/artivre.css";
-import iconleft from "../assets/img/icon-left.png";
-import iconright from "../assets/img/icon-right.png";
-import arowright from "../assets/img/ArrowRight.png";
+
 import {
     HiArrowLeft,
     HiArrowRight,
@@ -46,7 +44,6 @@ export const Artircle = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [test, settest] = useState(true);
 
-    const ref = useRef(null);
     const ref1 = useRef(null);
     const isInView1 = useInView(ref1, { once: false });
 
