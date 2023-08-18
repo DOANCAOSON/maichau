@@ -4,14 +4,14 @@ import logofooter from "../../src/assets/img/logomaichaufooter.svg";
 export const Footers = () => {
     return (
         <div className="bg-primary h-auto pt-[68px] px-[20px] py-[40px]">
-            <div className="grid gap-[80px] grid-cols-3 sm:grid-cols-1  m-auto lg:w-[1120px]">
-                <div className="pb-[32px]">
+            <div className="flex sm:flex-wrap gap-[88px] m-auto w-[1120px]">
+                <div className="sm:w-[100%]">
                     <img
-                        className="w-[157px] h-[100px]"
+                        className="w-[157px]  h-[100px] sm:h-[80px] sm:w-[126px]"
                         src={logofooter}
                     />
                 </div>
-                <div className="text-left text-color">
+                <div className="flex-2 text-left text-color">
                     <div className="font-BeautiqueDisplay mb-4 pb-[20px]">
                         Địa chỉ
                     </div>
@@ -33,7 +33,7 @@ export const Footers = () => {
                     </div>
                 </div>
                 <div>
-                    <div className="grid gap-4 lg:grid-cols-2 sm:grid-cols-1 pb-[32px]">
+                    <div className="flex-1 grid gap-4 lg:grid-cols-2 sm:grid-cols-1 pb-[32px]">
                         <div className="font-interRegular text-base text-color">
                             <div className="font-BeautiqueDisplay mb-4">
                                 Thời gian mở cửa

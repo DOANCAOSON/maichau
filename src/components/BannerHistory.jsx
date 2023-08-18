@@ -15,7 +15,7 @@ export const BannerHistory = () => {
                         style={{
                             backgroundImage: `url(${bannerHistory})`,
                         }}
-                        className="sm:h-[100%] h-[500px] lg:h-[305px] flex sm:py-[32px] py-[18px]  "
+                        className="sm:h-[100%] h-[500px] lg:h-[305px] flex sm:py-[32px] py-[18px] bg-no-repeat  "
                     >
                         <div className="w-[814px]  flex m-auto">
                             <div className="flex gap-8 items-center sm:items-start m-auto ">
@@ -34,7 +34,8 @@ export const BannerHistory = () => {
                                                 isInView
                                                     ? 1
                                                     : 1,
-                                                    transition: "all 0.5s ease-out 0.8s",
+                                            transition:
+                                                "all 0.5s ease-out 0.8s",
                                         }}
                                         className="sm:text-[28px] leading-[140%] h-[268px] w-[151px] text-end items-center  text-4xl sm:text-lg sm:h-[250px] sm:w-[119px] flex text-colorText font-BeautiqueDisplay "
                                     >
@@ -45,15 +46,12 @@ export const BannerHistory = () => {
                                 <div className="overflow-hidden w-[70%]">
                                     <p
                                         style={{
-                                            background: `url(${cu}) no-repeat`,
-                                            backgroundSize:
-                                                "cover",
-
                                             transform:
                                                 isInView
                                                     ? "none"
                                                     : "translateX(100%)",
-                                                    transition: "all 0.5s ease-out 0.8s",
+                                            transition:
+                                                "all 0.5s ease-out 0.8s",
                                         }}
                                         className="sm:w-[100%] leading-[140%] text-left font-interRegular text-base m-0"
                                     >
