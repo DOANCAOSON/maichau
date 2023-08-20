@@ -100,7 +100,7 @@ export const Footers = () => {
                         </div>
                     </div>
                     <div className="col-span-2 sm:pl-[32px] sm:col-span-1 ">
-                        <button className="text-colorText text-base drop-shadow-xl font-interBold   rounded-full bg-color py-[16px] px-[32px]">
+                        <button className="text-colorText text-base drop-shadow-xl font-interBold   sm:py-[16px] sm:px-[46px]  rounded-full bg-color py-[16px] px-[32px]">
                             LIÊN HỆ NHƯỢNG QUYỀN
                         </button>
                     </div>
