@@ -9,6 +9,7 @@ import '../../src/assets/css/artivre.css'
 
 import { HiArrowLeft, HiArrowRight, HiOutlineArrowCircleRight, HiOutlineArrowCircleLeft } from 'react-icons/hi'
 import 'animate.css'
+import Button from './Button'
 
 const APIFake = [
   {
@@ -104,7 +105,7 @@ export const Artircle = () => {
               className={'grid grid-cols-3 gap-6 sm:gap-3 sm:grid-cols-2 sm:text-base font-inter500 '}
             >
               {APIFake.map((item, index) => (
-                <div
+                <Button
                   key={index}
                   style={{
                     backgroundColor: selectedItem === index ? '#A82825' : '#FFFFFF',
@@ -113,10 +114,9 @@ export const Artircle = () => {
                     border: selectedItem === index ? 'none' : '1px solid #888888'
                   }}
                   onClick={() => handleItemClick(index)}
-                  className=' text-center font-interBoldSemiBold sm:text-base block py-[16px] px-[32px] rounded-full sm:py-[10px] sm:px-[20px] hover:bg-primary'
                 >
                   {item.btn}
-                </div>
+                </Button>
               ))}
             </div>
 

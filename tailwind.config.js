@@ -26,6 +26,24 @@ export default {
       },
       screens: {
         sm: { min: '100px', max: '647px' }
+      },
+      animation: {
+        tadason: 'tadason 1.4s ease infinite'
+      },
+      keyframes: {
+        tadason: {
+          '0%': { transform: 'rotate(0deg)' },
+          '10%': { transform: 'rotate(-3deg)' },
+          '20%': { transform: 'rotate(-3deg)' },
+          '30%': { transform: 'rotate(3deg)' },
+          '40%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+          '60%': { transform: 'rotate(-3deg)' },
+          '70%': { transform: 'rotate(3deg)' },
+          '80%': { transform: 'rotate(-3deg)' },
+          '90%': { transform: 'rotate(3deg)' },
+          '100%': { transform: 'rotate(0deg)' }
+        }
       }
     }
   },
