@@ -12,41 +12,17 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%;
-    height: 0%;
+    width: 100%;
+    height: 3%;
     background-color: #ffffff;
     transition: width 0.5s ease;
     border: none;
+    transform: translateX(-100%) ;
+    transition: all 0.5s ease-in ;
 }
-.container1:hover .border {
-    animation: shrinkBorder1 1s forwards;
-}
-
-.container1:not(:hover) .border {
-    animation: shrinkBorder 1s forwards;
-}
-
-@keyframes shrinkBorder1 {
-    0% {
-        width: 0%;
-        height: 3px;
-    }
-    100% {
-        width: 100%;
-        height: 3px;
-    }
-}
-
-@keyframes shrinkBorder {
-    0% {
-        width: 100%;
-        height: 3px;
-    }
-    100% {
-        width: 0%;
-        height: 3px;
-    }
-}
+ .container1:hover .border {
+    transform: translateX(0) ;
+} 
 
 .payment-address-form {
     display: grid;
